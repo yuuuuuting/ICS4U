@@ -26,7 +26,8 @@ def tfInput(string):
 
 
 # ICS4U:
-# PUT ALL OF YOUR FUNCTIONS HERE
+
+#1 transform string level to numerical percentage
 def level2Percent(level):
         if level=='4+':
             return 100
@@ -55,6 +56,7 @@ def level2Percent(level):
         elif level=='< 1':
             return 40
 
+#2 transform numerical percentage to string level
 def percent2Level(percent):
         if percent in range (95,101):
             return "4+"
@@ -83,12 +85,15 @@ def percent2Level(percent):
         elif percent in range (0,50):
             return "<1"
 
+#3 to check if two are the same
 def stringCompare(string1,string2):
     return string1.lower().strip()== string2.lower().strip()
 
+#4 be able to add new grades to database
 def addGrade(database,course,assignment,student,grade):
     return database+[[course,assignment,student,grade]]
 
+#5 allows the user to input more grades into database
 def inputGrades(database):
         course=input('please enter the course name:')
         assignment=input('please enter the name of the assignment/test/exam:')
@@ -108,6 +113,7 @@ def inputGrades(database):
 
         return database
 
+#6 be able to returns the average percent grade for the specified student.
 def studentAverage(database,student):
     gLevel=[]
     gPercent=[]
@@ -125,7 +131,7 @@ def studentAverage(database,student):
 
     return sum/len(gPercent)
 
-
+#7 be able to returns the average percent grade for specified course
 def courseAverage(database,course):
     gLevel=[]
     gPercent=[]
@@ -146,11 +152,18 @@ def courseAverage(database,course):
 if __name__=="__main__":
     pass
     # ICS4U:
-    # PUT ANY EXTRA CODE (TESTING, ETC) HERE
+    # codes that are able to let program testing/running
+    #1
     print(level2Percent('4+'))
+    #2
     print(percent2Level(87))
+    #3
     print(stringCompare('joHn','JoHN'))
+    #4
     print(addGrade(database,'ABC4D','unit 1 test','lancer','4'))
+    #5
     print(inputGrades(database))
+    #6
     print(studentAverage(database,'Luke Skywalker'))
+    #7
     print(courseAverage(database,'ICS4U'))
