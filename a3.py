@@ -4,7 +4,6 @@ Name:       John Zhang
 Date:       2016 4 17
 Desc:       be able to makes change for files in pycharm
 '''
-
 # An array created for array2TSV
 array = [['ICS4U', 'Assignment 1', 'Luke Skywalker', '3+'],['ICS4U', 'Assignment 1', 'Han Solo', '4-']]
 
